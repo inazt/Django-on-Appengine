@@ -6,5 +6,8 @@ from django.template import RequestContext
 
 def index(request):
     return render_to_response('myapp/index.html', {}); 
+
+def main(request):
+    return HttpResponse("<h1>Hello,</h1>");
    
 

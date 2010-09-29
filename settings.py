@@ -71,22 +71,24 @@ TEMPLATE_LOADERS = (
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.doc.XViewMiddleware',
 )
 
-ROOT_URLCONF = 'appproject.urls'
+ROOT_URLCONF = 'urls'
+ROOT_PATH = os.path.dirname(__file__)
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(_base, '/templates')
+    ROOT_PATH + '/templates',
 )
 
 INSTALLED_APPS = (
-    'appproject.myapp'
+    #'appproject.myapp'
     #'django.contrib.auth',
-    #'django.contrib.contenttypes',
+    'django.contrib.contenttypes',
     #'django.contrib.sessions',
-    #'django.contrib.sites',
+    'django.contrib.sites',
     #'django.contrib.messages',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
