@@ -2,7 +2,7 @@ import logging, os, sys
 
 # Google App Engine imports.
 from google.appengine.ext.webapp import util
-
+from google.appengine.ext.webapp import template
 # Remove the standard version of Django.
 for k in [k for k in sys.modules if k.startswith('django')]:
     del sys.modules[k]
